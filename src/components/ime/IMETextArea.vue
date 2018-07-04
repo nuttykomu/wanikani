@@ -1,6 +1,24 @@
 <template>
     <div>
+        <h3>Input Mode:</h3>
+
+        <input
+            type="radio"
+            value="ひらがな"
+            v-model="mode"
+            @change="text = ''">
+        ひらがな<br>
+
+        <input
+            type="radio"
+            value="カタカナ"
+            v-model="mode"
+            @change="text = ''">
+        カタカナ
+
+        <br><br>
         <textarea
+            maxlength="20"
             ref="textarea"
             v-model="text"
             @input="update">
@@ -10,10 +28,11 @@
 
 <script>
 import HiraganaMap from './HiraganaMap';
+import KatakanaMap from './KatakanaMap';
 
 const CHARACTER_MAP = {
     'ひらがな': HiraganaMap,
-    'カタカナ': []
+    'カタカナ': KatakanaMap
 };
 
 export default {
@@ -42,10 +61,15 @@ export default {
 </script>
 
 <style scoped>
+div {
+    font-size: 20px;
+}
+
 textarea {
-    font-size: 24px;
+    overflow: hidden;
+    font-size: 48px;
     resize: none;
-    height: 240px;
+    height: 60px;
     width: 100%;
 }
 </style>
