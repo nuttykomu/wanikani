@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import IMETextArea from './components/IMETextArea';
+import IMETextArea from './components/ime/IMETextArea';
 
 export default {
     name: 'app',
