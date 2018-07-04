@@ -1,43 +1,28 @@
 <template>
     <div id="app">
-        Hello world!
+        <h1>IME Text Area</h1>
+        <p>Type in the text box below. The text will automatically be replaced with hiragana characters.</p>
+        <ime-textarea></ime-textarea>
     </div>
 </template>
 
 <script>
+import IMETextArea from './components/IMETextArea';
+
 export default {
     name: 'app',
-    data () {
-        return {};
+    components: {
+        'ime-textarea': IMETextArea
     }
 };
 </script>
 
 <style lang="scss">
-#app {
-    font-family: 'Avenir', Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    color: #2c3e50;
-    margin-top: 60px;
+div {
+    margin: 20px;
 }
 
-h1, h2 {
-    font-weight: normal;
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-li {
-    display: inline-block;
-    margin: 0 10px;
-}
-
-a {
-    color: #42b983;
+h1, p {
+    margin-left: 20px;
 }
 </style>
