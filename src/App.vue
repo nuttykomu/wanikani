@@ -1,7 +1,6 @@
 <template>
     <div id="app">
         <h1>IME Text Area</h1>
-        <p>Type in the text box below. The text will automatically be replaced with hiragana characters.</p>
         <ime-textarea></ime-textarea>
     </div>
 </template>
@@ -18,6 +17,15 @@ export default {
 </script>
 
 <style lang="scss">
+@font-face {
+    font-family: PixelMplus;
+    src: url("./assets/PixelMplus12-Regular.ttf") format('truetype');
+}
+
+html {
+    font-family: PixelMplus;
+}
+
 div {
     margin: 20px;
 }

@@ -18,10 +18,13 @@
 
         <br><br>
         <textarea
-            maxlength="20"
+            rows="1"
+            maxlength="16"
             ref="textarea"
             v-model="text"
-            @input="update">
+            @input="update"
+            @keydown.enter.prevent
+            @keydown.space.prevent>
         </textarea>
     </div>
 </template>
@@ -66,10 +69,12 @@ div {
 }
 
 textarea {
+    font-family: PixelMplus;
     overflow: hidden;
-    font-size: 48px;
+    font-size: 24px;
     resize: none;
-    height: 60px;
-    width: 100%;
+    height: 24px;
+    width: 20%;
+    padding: 20px;
 }
 </style>
