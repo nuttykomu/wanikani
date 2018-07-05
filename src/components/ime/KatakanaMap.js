@@ -183,5 +183,7 @@ export default [
     { romaji: 'I', kana: 'イ' },
     { romaji: 'E', kana: 'エ' },
     { romaji: 'O', kana: 'オ' },
-    { romaji: 'U', kana: 'ウ' }
+    { romaji: 'U', kana: 'ウ' },
+
+    { romaji: '-', kana: 'ー' }
 ];

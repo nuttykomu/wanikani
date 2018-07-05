@@ -45,8 +45,8 @@ export default {
     methods: {
         update () {
             const filters = {
-                'ひらがな': /[^a-zA-Z\u3040-\u309F\n]/g,
-                'カタカナ': /[^a-zA-Z\u30A0-\u30FF\n]/g
+                'ひらがな': /[^a-zA-Z\u3040-\u309F\-\\s+]/g,
+                'カタカナ': /[^a-zA-Z\u30A0-\u30FF\-\\s+]/g
             };
 
             this.text = this.text.replace(filters[this.mode], '');
